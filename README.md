@@ -1,16 +1,32 @@
-# 闪念 Releases
+# Shanion
 
-这里仅保留闪念最新发布包。
+`Shanion` 是一个多端本地优先碎片记录客户端。
 
-## 最新版本
+## 当前目标
 
-源代码提交：`htao-123/Shanion@6f17fe4`
+- 以本地存储为核心，记录不会依赖远端服务。
+- 支持文本、链接、图片、视频、语音、文件等碎片内容。
+- 每条记录围绕文本内容与附件列表组织，并自动记录创建时间、位置与设备信息。
+- 提供检索、同步、智能整理等能力。
 
-| 平台 | 文件 | 说明 |
-| --- | --- | --- |
-| Windows x64 | [闪念Setup-x64.exe](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5Setup-x64.exe) | Windows 64 位安装包 |
-| Android ARM64 | [闪念-Android-arm64-v8a-release.apk](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-arm64-v8a-release.apk) | 主流安卓手机使用 |
-| Android ARMv7 | [闪念-Android-armeabi-v7a-release.apk](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-armeabi-v7a-release.apk) | 老 32 位安卓设备使用 |
-| Android x86_64 | [闪念-Android-x86_64-release.apk](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-x86_64-release.apk) | 模拟器或 x86 设备使用 |
+## 下载
 
-如不确定安卓设备架构，优先下载 `arm64-v8a`。
+当前版本：Shanion 1.0.0+1
+
+源代码提交：[`htao-123/Shanion@6f17fe4`](https://github.com/htao-123/Shanion/commit/6f17fe4)
+
+### Android
+
+如果你不确定该下载哪个版本，**优先下载 arm64-v8a 版本**，绝大多数近几年的安卓手机都适用。
+
+| 平台 | 适用设备 | 下载 |
+|---|---|---|
+| Android arm64-v8a | 大多数安卓手机，推荐优先选择 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-arm64-v8a-release.apk) |
+| Android armeabi-v7a | 较老的 32 位安卓设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-armeabi-v7a-release.apk) |
+| Android x86_64 | 安卓模拟器、少部分 x86 设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-x86_64-release.apk) |
+
+### Windows
+
+| 平台 | 适用设备 | 下载 |
+|---|---|---|
+| Windows x64 | 64 位 Windows 电脑 | [下载安装包](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5Setup-x64.exe) |
