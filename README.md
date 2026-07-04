@@ -13,7 +13,7 @@
 
 当前版本：Shanion 1.0.0+1
 
-源代码提交：[`htao-123/Shanion@6f17fe4`](https://github.com/htao-123/Shanion/commit/6f17fe4)
+源代码提交：[`htao-123/Shanion@4688f6c`](https://github.com/htao-123/Shanion/commit/4688f6c)
 
 ### Android
 
@@ -21,12 +21,12 @@
 
 | 平台 | 适用设备 | 下载 |
 |---|---|---|
-| Android arm64-v8a | 大多数安卓手机，推荐优先选择 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-arm64-v8a-release.apk) |
-| Android armeabi-v7a | 较老的 32 位安卓设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-armeabi-v7a-release.apk) |
-| Android x86_64 | 安卓模拟器、少部分 x86 设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5-Android-x86_64-release.apk) |
+| Android arm64-v8a | 大多数安卓手机，推荐优先选择 | [下载 APK](https://github.com/htao-123/Shanion-releases/releases/download/v1.0.0%2B1/Shanion-1.0.0%2B1-android-arm64-v8a-release-20260704-1341.apk) |
+| Android armeabi-v7a | 较老的 32 位安卓设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/releases/download/v1.0.0%2B1/Shanion-1.0.0%2B1-android-armeabi-v7a-release-20260704-1341.apk) |
+| Android x86_64 | 安卓模拟器、少部分 x86 设备 | [下载 APK](https://github.com/htao-123/Shanion-releases/releases/download/v1.0.0%2B1/Shanion-1.0.0%2B1-android-x86_64-release-20260704-1341.apk) |
 
 ### Windows
 
 | 平台 | 适用设备 | 下载 |
 |---|---|---|
-| Windows x64 | 64 位 Windows 电脑 | [下载安装包](https://github.com/htao-123/Shanion-releases/raw/main/%E9%97%AA%E5%BF%B5Setup-x64.exe) |
+| Windows x64 | 64 位 Windows 电脑 | [下载安装包](https://github.com/htao-123/Shanion-releases/releases/download/v1.0.0%2B1/Shanion-1.0.0%2B1-windows-x64-setup-20260704-1341.exe) |
