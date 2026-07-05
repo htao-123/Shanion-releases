@@ -13,7 +13,7 @@
 
 当前版本：Shanion 1.0.0+1
 
-源代码提交：[`htao-123/Shanion@01f4365`](https://github.com/htao-123/Shanion/commit/01f4365)
+源代码提交：[`htao-123/Shanion@b09ebb6`](https://github.com/htao-123/Shanion/commit/b09ebb6)
 
 ### Android
 
