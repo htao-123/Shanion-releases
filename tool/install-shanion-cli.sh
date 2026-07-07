@@ -147,9 +147,9 @@ main() {
   info "安装完成：$INSTALL_DIR/$BINARY_NAME"
   "$INSTALL_DIR/$BINARY_NAME" --help >/dev/null || fail "安装后自检失败。"
   if [ "$path_ready" -eq 0 ]; then
-    info "现在可以使用：shanion note add --text \"第一条闪念\""
+    info "现在可以使用：shanion note create --text \"第一条闪念\""
   else
-    info "当前终端可先使用：$INSTALL_DIR/$BINARY_NAME note add --text \"第一条闪念\""
+    info "当前终端可先使用：$INSTALL_DIR/$BINARY_NAME note create --text \"第一条闪念\""
   fi
 }
 
