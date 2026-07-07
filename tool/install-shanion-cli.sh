@@ -83,7 +83,7 @@ ensure_path() {
 
   if grep -F "$PATH_MARKER" "$profile" >/dev/null 2>&1 &&
     grep -Fx "$path_line" "$profile" >/dev/null 2>&1; then
-    info "$INSTALL_DIR 已写入 $profile；请重开终端后直接使用 shanion。"
+    info "${INSTALL_DIR} 已写入 ${profile}；请重开终端后直接使用 shanion。"
     return 1
   fi
 
@@ -98,7 +98,7 @@ ensure_path() {
       printf '%s\n' "$path_line"
     } >>"$profile"
   fi
-  info "已把 $INSTALL_DIR 写入 $profile；请重开终端后直接使用 shanion。"
+  info "已把 ${INSTALL_DIR} 写入 ${profile}；请重开终端后直接使用 shanion。"
   return 1
 }
 
