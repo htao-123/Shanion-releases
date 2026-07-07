@@ -6,6 +6,7 @@ VERSION="${SHANION_CLI_VERSION:-latest}"
 INSTALL_DIR="${SHANION_CLI_INSTALL_DIR:-$HOME/.local/bin}"
 BINARY_NAME="${SHANION_CLI_BINARY_NAME:-shanion}"
 PATH_MARKER="# Shanion CLI"
+SHANION_CLI_TEMP_DIR=""
 
 info() {
   printf '[shanion-cli] %s\n' "$1"
@@ -14,6 +15,12 @@ info() {
 fail() {
   printf '[shanion-cli] %s\n' "$1" >&2
   exit 1
+}
+
+cleanup_temp_dir() {
+  if [ -n "${SHANION_CLI_TEMP_DIR:-}" ]; then
+    rm -rf "$SHANION_CLI_TEMP_DIR"
+  fi
 }
 
 need_command() {
@@ -107,14 +114,14 @@ main() {
   need_command tar
   need_command install
 
-  local os arch url temp_dir archive archive_entries
+  local os arch url archive archive_entries
   os="$(detect_os)"
   arch="$(detect_arch)"
   url="$(download_url "$os" "$arch")"
-  temp_dir="$(mktemp -d)"
-  archive="$temp_dir/shanion-cli.tar.gz"
+  SHANION_CLI_TEMP_DIR="$(mktemp -d)"
+  archive="$SHANION_CLI_TEMP_DIR/shanion-cli.tar.gz"
 
-  trap 'rm -rf "$temp_dir"' EXIT
+  trap cleanup_temp_dir EXIT
 
   info "下载 $url"
   curl -fL "$url" -o "$archive" || fail "下载失败。请确认 GitHub Release 已上传对应资产。"
@@ -127,13 +134,13 @@ main() {
   if [ "$archive_entries" != "$BINARY_NAME" ]; then
     fail "压缩包内必须只包含 $BINARY_NAME。"
   fi
-  tar -xzf "$archive" -C "$temp_dir"
+  tar -xzf "$archive" -C "$SHANION_CLI_TEMP_DIR"
 
-  if [ ! -f "$temp_dir/$BINARY_NAME" ]; then
+  if [ ! -f "$SHANION_CLI_TEMP_DIR/$BINARY_NAME" ]; then
     fail "压缩包内没有找到 $BINARY_NAME 可执行文件。"
   fi
 
-  install -m 0755 "$temp_dir/$BINARY_NAME" "$INSTALL_DIR/$BINARY_NAME"
+  install -m 0755 "$SHANION_CLI_TEMP_DIR/$BINARY_NAME" "$INSTALL_DIR/$BINARY_NAME"
   local path_ready=0
   ensure_path || path_ready=1
 
